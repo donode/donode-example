@@ -21,5 +21,8 @@
   "homepage": "https://github.com/madhusudhand/new#readme",
   "dependencies": {
     "querystring": "^0.2.0"
+  },
+  "devDependencies": {
+    "node-inspector": "^0.12.8"
   }
 }
