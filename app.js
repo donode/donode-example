@@ -1,2 +1,5 @@
-const server = require('anew').Server;
-server.listen(3000);
+const Server = require('donode').Server;
+const routes = require('./app/routes');
+const listner = new Server(routes).listner;
+
+listner.listen(3000);
