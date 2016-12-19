@@ -12,17 +12,26 @@ class UserController {
     };
   }
 
-  // post() {
-  //   console.log('UserController post called');
-  // }
-  //
-  // put() {
-  //   console.log('UserController put called');
-  // }
-  //
-  // delete() {
-  //   console.log('UserController delete called');
-  // }
+  post() {
+    console.log('UserController post called');
+    return {
+      result: 'data posted'
+    };
+  }
+
+  put() {
+    console.log('UserController put called');
+    return {
+      result: 'data updated'
+    };
+  }
+
+  delete() {
+    console.log('UserController delete called');
+    return {
+      result: 'data deleted'
+    };
+  }
 }
 
 module.exports = UserController;
