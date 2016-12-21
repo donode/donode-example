@@ -1,19 +1,20 @@
 'use strict';
 
-class UserController {
+module.exports = class UserController {
   constructor() {
     // console.log('constructor called');
   }
 
-  get() {
-    // console.log('UserController get called');
+  get(request) {
+    console.log('UserController get called');
     return {
       hello: 'world !!!!'
     };
   }
 
-  post() {
+  post(request) {
     console.log('UserController post called');
+    console.log(request.inputs);
     return {
       result: 'data posted'
     };
@@ -33,5 +34,3 @@ class UserController {
     };
   }
 }
-
-module.exports = UserController;

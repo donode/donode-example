@@ -1,8 +1,10 @@
 'use strict';
-const Router = require('donode').Router;
-const router = new Router();
+const router = require('donode').Router;
 
-router.get('/hello', 'UserController@get');
-router.post('/hello', 'UserController@post');
+router.routes([
+  { path: '/hello', method: 'GET', handler: 'UserController@get' },
+  { path: '/hello', method: 'POST', handler: 'UserController@post' },
+  { path: '/hello/{id}', method: 'GET', handler: 'UserController@get' }
+]);
 
 module.exports = router;
