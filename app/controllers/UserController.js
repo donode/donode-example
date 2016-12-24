@@ -7,6 +7,7 @@ module.exports = class UserController {
 
   get(request) {
     console.log('UserController get called');
+    console.log(request.params);
     return {
       hello: 'world !!!!'
     };
@@ -14,6 +15,8 @@ module.exports = class UserController {
 
   post(request) {
     console.log('UserController post called');
+    console.log(request.queryParams);
+    console.log(request.routeParams);
     console.log(request.inputs);
     return {
       result: 'data posted'

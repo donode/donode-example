@@ -2,8 +2,8 @@ const Server = require('donode').Server;
 const routes = require('./app/routes');
 const config = require('./config/config');
 
-const listner = new Server(routes, Object.assign(config, {
+const listener = new Server(routes, Object.assign(config, {
   appRoot: __dirname
-})).listner;
+})).listener;
 
-listner.listen(3000);
+listener.listen(3000);
