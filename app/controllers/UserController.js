@@ -1,13 +1,18 @@
 'use strict';
 
-module.exports = class UserController {
+const MasterController = require('./base/MasterController');
+
+module.exports = class UserController extends MasterController {
   constructor() {
     // console.log('constructor called');
+    super();
   }
 
   get(request) {
     console.log('UserController get called');
-    console.log(request.params);
+
+    super.validate();
+
     return {
       hello: 'world !!!!'
     };
@@ -17,7 +22,7 @@ module.exports = class UserController {
     console.log('UserController post called');
     console.log(request.queryParams);
     console.log(request.routeParams);
-    console.log(request.inputs);
+    console.log(request.body);
     return {
       result: 'data posted'
     };
