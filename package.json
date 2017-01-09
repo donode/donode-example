@@ -4,7 +4,7 @@
   "description": "Super fast framework for developing RESTful services",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +20,6 @@
   },
   "homepage": "https://github.com/madhusudhand/new#readme",
   "dependencies": {
-    "querystring": "^0.2.0"
-  },
-  "devDependencies": {
-    "node-inspector": "^0.12.8"
+    
   }
 }

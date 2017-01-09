@@ -20,6 +20,7 @@ module.exports = class UserController extends MasterController {
 
   post(request) {
     console.log('UserController post called');
+    console.log(request.headers);
     console.log(request.queryParams);
     console.log(request.routeParams);
     console.log(request.body);
