@@ -19,7 +19,8 @@
     "url": "https://github.com/madhusudhand/new/issues"
   },
   "homepage": "https://github.com/madhusudhand/new#readme",
-  "dependencies": {
-    
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^3.13.1"
   }
 }

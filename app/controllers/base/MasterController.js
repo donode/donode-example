@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = class MasterController {
+class MasterController {
   constructor() {
     console.log('master constructor called');
   }
@@ -9,3 +9,5 @@ module.exports = class MasterController {
     console.log('master validate called');
   }
 }
+
+module.exports = MasterController;

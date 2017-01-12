@@ -1,17 +1,14 @@
 'use strict';
 
-const MasterController = require('./base/MasterController');
+const Controller = require('donode').Controller;
 
-module.exports = class UserController extends MasterController {
+class UserController extends Controller {
   constructor() {
-    // console.log('constructor called');
     super();
   }
 
   get(request) {
     console.log('UserController get called');
-
-    super.validate();
 
     return {
       hello: 'world !!!!'
@@ -43,3 +40,5 @@ module.exports = class UserController extends MasterController {
     };
   }
 }
+
+module.exports = UserController;

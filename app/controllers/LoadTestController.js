@@ -1,10 +1,13 @@
 'use strict';
 
+const Controller = require('donode').Controller;
 const responseData = require('../response-data');
 
-module.exports = class UserController {
+class LoadTestController extends Controller {
   constructor() {
-    // console.log('constructor called');
+    super();
+    // this.middleware('AuthMiddleware');
+    console.log('loadtest constructor called');
   }
 
   get(request) {
@@ -12,20 +15,17 @@ module.exports = class UserController {
   }
 
   post(request) {
-    return {
-      result: 'data posted'
-    };
+    // console.log(request.body);
+    return request.body;
   }
 
   put() {
-    return {
-      result: 'data updated'
-    };
+    return {};
   }
 
   delete() {
-    return {
-      result: 'data deleted'
-    };
+    return {};
   }
 }
+
+module.exports = LoadTestController;

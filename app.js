@@ -1,8 +1,9 @@
 const server = require('donode').Server;
-const routes = require('./app/routes');
 const config = require('./config/config');
+require('./app/routes');
+require('./app/middleware');
 
-const listener = server.create(routes, Object.assign(config, {
+const listener = server.create(Object.assign(config, {
   appRoot: __dirname
 }));
 
