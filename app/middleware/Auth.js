@@ -10,7 +10,10 @@ class Auth extends Middleware {
     // do some checks
     // return error object if not satisfied
     // else call next()
-    next();
+
+    console.log('auth middleware called');
+
+    return next();
   }
 }
 

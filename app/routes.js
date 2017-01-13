@@ -6,6 +6,14 @@ router.routes([
     path: '/hello',
     method: 'GET',
     handler: 'UserController@get',
+    middleware: ['Auth'],
+
+    // middleware: {
+    //   all: [],
+    //   current: [],
+    //   children: []
+    // },
+
     children: [
       { path: '/{id}', method: 'GET', handler: 'UserController@get' }
     ]
