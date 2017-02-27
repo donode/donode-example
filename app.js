@@ -2,7 +2,7 @@ require('./app/routes');
 require('./app/headers');
 
 const server = require('donode').Server;
-const config = require('./config/config');
+const config = require('./config');
 
 const listener = server.create(Object.assign(config, {
   appRoot: __dirname

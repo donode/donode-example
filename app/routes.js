@@ -2,7 +2,7 @@
 const router = require('donode').Router;
 
 router.routes([
-  // { path: '/', method: 'GET', handler: 'UserController@get' },
+  { path: '/', method: 'GET', handler: 'UserController@get' },
   {
     path: '/hello',
     method: 'GET',

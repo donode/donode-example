@@ -19,7 +19,9 @@
     "url": "https://github.com/madhusudhand/new/issues"
   },
   "homepage": "https://github.com/madhusudhand/new#readme",
-  "dependencies": {},
+  "dependencies": {
+    "donode": "^1.0.0-beta.2"
+  },
   "devDependencies": {
     "eslint": "^3.13.1"
   }

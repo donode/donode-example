@@ -2,6 +2,12 @@
 App to demonstrate *donode* Framework
 
 ```
-$ cd /path/to/donode-example
+$ cd donode-example
+$ npm install
+$ npm start
+```
+
+dev
+```
 $ ln -s ../donode/ node_modules/donode/
 ```
