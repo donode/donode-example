@@ -7,16 +7,17 @@ class LoadTestController extends Controller {
   constructor() {
     super();
     // this.middleware('AuthMiddleware');
-    console.log('loadtest constructor called');
+    // console.log('loadtest constructor called');
   }
 
-  get(request) {
-    return responseData;
+  get(request, response) {
+    return response.send(responseData);
   }
 
-  post(request) {
+  post(request, response) {
     // console.log(request.body);
-    return request.body;
+    return response.send(responseData);
+    // return request.body;
   }
 
   put() {

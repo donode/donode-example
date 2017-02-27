@@ -1,18 +1,19 @@
 'use strict';
-
 const Controller = require('donode').Controller;
 
 class UserController extends Controller {
   constructor() {
     super();
+    console.log('constructor called ');
   }
 
-  get(request) {
+  get(request, response) {
     console.log('UserController get called');
-
-    return {
-      hello: 'world !!!!'
-    };
+    console.log(request.routeParams);
+    if (request.routeParams.id) {
+      this.something = request.routeParams.id;
+    }
+    response.send({ hello: 'hi', something: this.something });
   }
 
   post(request) {

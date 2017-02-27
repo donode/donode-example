@@ -11,9 +11,8 @@ class Auth extends Middleware {
     // return error object if not satisfied
     // else call next()
 
-    console.log('auth middleware called');
-    // return response.send({ data: 'Auth middleware' });
-    // return this.next({error: '500'});
+    console.log('user/auth middleware called');
+    // return response.send({ data: 'user/Auth' });
 
     return next();
   }
