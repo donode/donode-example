@@ -9,14 +9,21 @@ class UserController extends Controller {
 
   get(request, response) {
     console.log('UserController get called');
-    console.log(request.routeParams);
-    if (request.routeParams.id) {
-      this.something = request.routeParams.id;
-    }
-    response.send({ hello: 'hi', something: this.something });
+
+    // const p = new Promise((resolve, reject) => {
+    //   setTimeout(() => {
+    //     resolve({ hi: 'this is await' });
+    //   }, 5000);
+    // });
+
+    // await p;
+
+
+
+    response.send({ hi: 'this is data', env: process.env.NODE_ENV });
   }
 
-  post(request) {
+  post(request, response) {
     console.log('UserController post called');
     console.log(request.headers);
     console.log(request.queryParams);
@@ -27,14 +34,14 @@ class UserController extends Controller {
     };
   }
 
-  put() {
+  put(request, response) {
     console.log('UserController put called');
     return {
       result: 'data updated'
     };
   }
 
-  delete() {
+  delete(request, response) {
     console.log('UserController delete called');
     return {
       result: 'data deleted'
