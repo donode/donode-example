@@ -16,7 +16,7 @@ module.exports = [
     // },
     //
     children: [
-      { path: '/something', method: 'GET', handler: 'UserController@get', middleware: ['user/Auth'] }
+      { path: '/something', method: 'GET', handler: 'UserController@get' }
     ]
   },
   // {

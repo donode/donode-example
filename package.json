@@ -4,7 +4,10 @@
   "description": "Super fast framework for developing RESTful services",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "app:dev": "NODE_ENV=development node app.js",
+    "app:prod": "NODE_ENV=production node app.js",
+    "test": "mocha --recursive app/**/*.test.js"
   },
   "repository": {
     "type": "git",
@@ -20,9 +23,11 @@
   },
   "homepage": "https://github.com/madhusudhand/new#readme",
   "dependencies": {
-    "donode": "^1.0.0-beta.2"
+    "donode": "^1.0.0-beta.4"
   },
   "devDependencies": {
-    "eslint": "^3.13.1"
+    "chai": "^3.5.0",
+    "eslint": "^3.13.1",
+    "mocha": "^3.2.0"
   }
 }

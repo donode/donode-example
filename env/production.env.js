@@ -1,8 +1,8 @@
 module.exports = {
   /*
-  **  host
+  **  hostname
   */
-  host: '',
+  hostname: '',
 
   /*
   **  port number

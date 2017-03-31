@@ -4,27 +4,18 @@ const Controller = require('donode').Controller;
 class UserController extends Controller {
   constructor() {
     super();
-    console.log('constructor called ');
   }
 
   get(request, response) {
-    console.log('UserController get called');
+    console.log(request.url);
+    console.log(request.originalUrl);
+    console.log(request.hostname);
+    response.send({ hi: 'this is data' });
 
-    // const p = new Promise((resolve, reject) => {
-    //   setTimeout(() => {
-    //     resolve({ hi: 'this is await' });
-    //   }, 5000);
-    // });
-
-    // await p;
-
-
-
-    response.send({ hi: 'this is data', env: process.env.NODE_ENV });
+    // console.log(response.headersSent);
   }
 
   post(request, response) {
-    console.log('UserController post called');
     console.log(request.headers);
     console.log(request.queryParams);
     console.log(request.routeParams);
