@@ -9,5 +9,5 @@ $ npm start
 
 dev
 ```
-$ ln -s ../donode/ node_modules/donode/
+ln -s ~/full/path/donode/ node_modules/donode
 ```

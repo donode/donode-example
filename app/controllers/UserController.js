@@ -7,9 +7,9 @@ class UserController extends Controller {
   }
 
   get(request, response) {
-    console.log(request.url);
-    console.log(request.originalUrl);
-    console.log(request.hostname);
+    // console.log(request.url);
+    // console.log(request.originalUrl);
+    // console.log(request.hostname);
     response.send({ hi: 'this is data' });
 
     // console.log(response.headersSent);

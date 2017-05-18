@@ -1,32 +1,25 @@
 'use strict';
 
-module.exports = [
+const routes = [
   { path: '/', method: 'GET', handler: 'UserController@get' },
   {
     path: '/hello',
     method: 'GET',
     handler: 'UserController@get',
-    middleware: { all: ['user/Auth']}, // 'Auth'],
-    headers: ['json-content'],
-
-    // middleware: {
-    //   all: ['Auth'],
-    //   // current: ['Auth'],
-    //   // children: ['Auth']
-    // },
-    //
     children: [
       { path: '/something', method: 'GET', handler: 'UserController@get' }
     ]
-  },
-  // {
-  //   path: '/hello',
-  //   method: 'POST',
-  //   handler: 'UserController@post'
-  // },
-  // { path: '/hello/{id}', method: 'GET', handler: 'UserController@get' },
-  //
-  // { path: '/user/settings', method: 'GET', handler: 'user/UserSettingsController@get' },
-
-  // { path: '/user', method: 'ALL', handler: 'UserController' }
+  }
 ];
+
+
+/*
+    All API routes will be prefixed with 'api'
+    which avoids conflicts with the static content which is served from 'public' directory
+*/
+module.exports = [{
+  path: '/api',
+  middleware: { all: ['Auth'] },
+  headers: ['json-content', 'allow-cors'],
+  children: routes
+}];
